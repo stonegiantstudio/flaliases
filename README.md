@@ -101,7 +101,7 @@ fhelp   # show cheat-sheet
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/stonegiantstudio/flaliases/main/flyway-aliases.sh \
-     -o ~/.flyway-aliases.sh && source ~/.zshrc
+     -o ~/.flyway-aliases.sh && source ~/.flyway-aliases.sh
 ```
 
 ## 5 · Uninstall
