@@ -58,21 +58,32 @@ Run fhelp to see the alias list at any time.
 
 ## 2 · Configure each Flyway repo
 
-# flyway.conf (example)
-flyway.url=jdbc:sqlserver://host.docker.internal:1433;databaseName=<db>;encrypt=true;trustServerCertificate=true
+Create a `flyway.conf` file in the project root:
+
+```properties
+# ---- flyway.conf (template) ----
+# Replace YOUR_DB_NAME with the database you created in your Docker container
+flyway.url=jdbc:sqlserver://host.docker.internal:1433;databaseName=YOUR_DB_NAME;encrypt=true;trustServerCertificate=true
+
+# Use the SA password you passed to docker run
 flyway.user=sa
-flyway.password=Str0ng_Pass!
+flyway.password=YOUR_STRONG_PASSWORD
+
+# Folder (inside the container) where migrations are mounted
 flyway.locations=filesystem:/flyway/migrations
+```
 
 The aliases mount:
 
+```text
 $(pwd)/db/migrations → /flyway/migrations
-
-$(pwd)/flyway.conf → /flyway/conf/flyway.conf
-
+$(pwd)/flyway.conf   → /flyway/conf/flyway.conf
+Feel free to change sa or the password to any login you created in your local SQL-Server container—the aliases just forward whatever credentials you put in flyway.conf.
+```
 
 ## 3  · Usage
 
+```bash
 cd my-flyway-repo
 
 fm      # apply migrations quietly
@@ -82,17 +93,22 @@ fvm     # verbose migrate (debug)
 fsql    # dry-run SQL
 
 fhelp   # show cheat-sheet
+```
 
 ## 4 · Updating the Script
 
+```bash
 curl -sSL https://raw.githubusercontent.com/stonegiantstudio/flaliases/main/flyway-aliases.sh \
      -o ~/.flyway-aliases.sh && source ~/.zshrc
+```
 
 ## 5 · Uninstall
 
+```bash
 sed -i '' '/flyway-aliases.sh/d' ~/.zshrc   # macOS; use -i for GNU sed
 rm ~/.flyway-aliases.sh
+```
 
-License
+## License
 MIT — free to use, modify, and distribute.
 Please keep the copyright notice.
