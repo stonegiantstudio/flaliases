@@ -38,8 +38,8 @@ fvi     flyway info           (verbose)
 fval    flyway validate       (quiet)
 fr      flyway repair         (quiet)
 fsql    flyway migrate -outputType=sql   (dry-run)
-fhist   fi | tail -n +5       (history table only)
-flast   fi | tail -15         (last 15 lines)
+fhist   fi | tail -n +5       (full history table, skip banner)
+flast   fi | tail -15         (last 15 lines of verbose info)
 EOF
 }
 ### ----------------------------------------------------
