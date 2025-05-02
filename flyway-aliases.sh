@@ -22,7 +22,6 @@ alias fr='f repair'           # fix history table
 alias fvm='fv migrate'
 alias fvi='fv info'
 # Extras
-alias fsql='fv -outputType=sql migrate'  # dry-run SQL
 alias fhist='fvi | tail -n +5'     # full history table, skip banner
 alias flast='fvi | tail -15'       # last 15 lines of verbose info
 
@@ -37,7 +36,6 @@ fi      flyway info           (quiet)
 fvi     flyway info           (verbose)
 fval    flyway validate       (quiet)
 fr      flyway repair         (quiet)
-fsql    flyway migrate -outputType=sql   (dry-run)
 fhist   fi | tail -n +5       (full history table, skip banner)
 flast   fi | tail -15         (last 15 lines of verbose info)
 EOF
