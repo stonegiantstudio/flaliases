@@ -43,14 +43,16 @@ your-project/
 ## 1 · Install
 
 ```bash
-# download
-
+# 1. Download the alias script
 curl -sSL https://raw.githubusercontent.com/stonegiantstudio/flaliases/main/flyway-aliases.sh \
      -o ~/.flyway-aliases.sh
 
-# load on every shell start
-echo 'source ~/.flyway-aliases.sh' >> ~/.zshrc   # or ~/.bashrc
-source ~/.zshrc
+# 2. Ensure it’s sourced in NEW shells (but only add the line if it isn’t there yet)
+grep -qxF 'source ~/.flyway-aliases.sh' ~/.zshrc || \
+  echo 'source ~/.flyway-aliases.sh' >> ~/.zshrc
+
+# 3. Load it into THIS shell **without** touching the rest of ~/.zshrc
+source ~/.flyway-aliases.sh
 ```
 Run fhelp to see the alias list at any time.
 
