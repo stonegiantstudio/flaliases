@@ -15,7 +15,6 @@ into terse, Git-style commands.
 | `fvi`  | `flyway info`                         | Show schema status (verbose) |
 | `fval` | `flyway validate -q`                  | Validate checksums |
 | `fr`   | `flyway repair -q`                    | Repair history table |
-| `fsql` | `flyway migrate -outputType=sql`      | Dry-run: output SQL only |
 | `fhist`| `flyway info \| tail -n +5`          | Full history (verbose)               |
 | `flast`| `flyway info \| tail -15`            | Last 15 history lines (verbose)      |
 | `fhelp`| —                                     | Show this cheat-sheet |
@@ -95,10 +94,7 @@ cd my-flyway-repo
 
 fm      # apply migrations quietly
 fi      # show schema version & pending scripts
-
 fvm     # verbose migrate (debug)
-fsql    # dry-run SQL
-
 fhelp   # show cheat-sheet
 ```
 
