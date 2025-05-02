@@ -18,7 +18,6 @@ alias fm='f migrate'          # apply migrations
 alias fi='f info'             # schema summary
 alias fval='f validate'       # checksum check
 alias fr='f repair'           # fix history table
-alias fclean='f clean'        # ⚠ drops schema
 # Verbose equivalents
 alias fvm='fv migrate'
 alias fvi='fv info'
@@ -38,7 +37,6 @@ fi      flyway info           (quiet)
 fvi     flyway info           (verbose)
 fval    flyway validate       (quiet)
 fr      flyway repair         (quiet)
-fclean  flyway clean          (DROPS schema)
 fsql    flyway migrate -outputType=sql   (dry-run)
 fhist   fi | tail -n +5       (history table only)
 flast   fi | tail -15         (last 15 lines)
