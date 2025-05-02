@@ -44,7 +44,8 @@ your-project/
 
 ```bash
 # download
-curl -sSL https://raw.githubusercontent.com/<your-user>/flyway-aliases/main/flyway-aliases.sh \
+
+curl -sSL https://raw.githubusercontent.com/stonegiantstudio/flaliases/main/flyway-aliases.sh \
      -o ~/.flyway-aliases.sh
 
 # load on every shell start
@@ -84,7 +85,7 @@ fhelp   # show cheat-sheet
 
 ## 4 · Updating the Script
 
-curl -sSL https://raw.githubusercontent.com/<your-user>/flyway-aliases/main/flyway-aliases.sh \
+curl -sSL https://raw.githubusercontent.com/stonegiantstudio/flaliases/main/flyway-aliases.sh \
      -o ~/.flyway-aliases.sh && source ~/.zshrc
 
 ## 5 · Uninstall
