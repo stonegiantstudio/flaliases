@@ -23,8 +23,8 @@ alias fvm='fv migrate'
 alias fvi='fv info'
 # Extras
 alias fsql='fv -outputType=sql migrate'  # dry-run SQL
-alias fhist='fi | tail -n +5'            # history only
-alias flast='fi | tail -15'              # last lines
+alias fhist='fvi | tail -n +5'     # full history table, skip banner
+alias flast='fvi | tail -15'       # last 15 lines of verbose info
 
 # Help: list all the above
 fhelp() {
