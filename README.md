@@ -13,6 +13,8 @@ into terse, Git-style commands.
 | `fval` | `flyway validate -q`                  | Validate checksums |
 | `fr`   | `flyway repair -q`                    | Repair history table |
 | `fsql` | `flyway migrate -outputType=sql`      | Dry-run: output SQL only |
+| `fhist`| `flyway info \| tail -n +5`          | Full history (verbose)               |
+| `flast`| `flyway info \| tail -15`            | Last 15 history lines (verbose)      |
 | `fhelp`| —                                     | Show this cheat-sheet |
 
 ---
