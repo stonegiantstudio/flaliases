@@ -4,6 +4,9 @@ Tiny shell helpers that turn a 90-character
 `docker run flyway/flyway:latest …`  
 into terse, Git-style commands.
 
+<img width="835" alt="image" src="https://github.com/user-attachments/assets/34cbb7f2-efe3-440a-85b1-84c3f53a3006" />
+
+
 | Alias | Expands to | Purpose |
 |-------|------------|---------|
 | `fm`   | `flyway migrate -q`                   | Apply migrations (quiet) |
